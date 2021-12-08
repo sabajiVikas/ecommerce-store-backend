@@ -13,11 +13,15 @@ const YAML = require("yamljs");
 
 // routes
 const home = require("./routes/home");
+const user = require("./routes/user");
 // swagger load
 const swaggerDocument = YAML.load("./swagger.yaml");
 
 // express init
 const app = express();
+
+// ejs
+app.set("view engine", "ejs");
 
 // express middleware
 app.use(express.json());
@@ -38,6 +42,10 @@ app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
 // router middlewares
 app.use("/api/v1", home);
+app.use("/api/v1", user);
+
+// ejs
+app.get("/signup", (req, res) => res.render("signup"));
 
 // exporting
 module.exports = app;
