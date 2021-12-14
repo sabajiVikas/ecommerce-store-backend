@@ -15,6 +15,7 @@ const YAML = require("yamljs");
 const home = require("./routes/home");
 const user = require("./routes/user");
 const product = require("./routes/product");
+const payment = require("./routes/payment");
 // swagger load
 const swaggerDocument = YAML.load("./swagger.yaml");
 
@@ -45,6 +46,7 @@ app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 app.use("/api/v1", home);
 app.use("/api/v1", user);
 app.use("/api/v1", product);
+app.use("/api/v1", payment);
 
 // ejs
 app.get("/signup", (req, res) => res.render("signup"));
