@@ -1,0 +1,25 @@
+{
+  "shippingInfo": {
+    "address": "58 K G Nagar",
+    "city": "Bengaluru",
+    "phoneNo": 9898989898,
+    "postalCode": 560018,
+    "state": "Karnataka",
+    "country": "India"
+  },
+  "orderItems": [
+    {
+      "name": "I Write Code",
+      "quantity": 1,
+      "image": "https://res.cloudinary.com/sabaji95/image/upload/v1639463714/ecommProductImg/dkklydxftvycw0cocu5n.jpg",
+      "price": 399,
+      "product": "61b83b27fc8e25559f377150"
+    }
+  ],
+  "paymentInfo": {
+    "id": "testString"
+  },
+  "taxAmount": 40,
+  "shippingAmount": 10,
+  "totalAmount": 449
+}
