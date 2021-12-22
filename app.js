@@ -44,6 +44,13 @@ app.use(morgan("tiny"));
 app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
 // router middlewares
+app.get("/", (req, res) =>
+  res.status(200).json({
+    success: true,
+    message: "Welcome to Ecommerce Store Backend",
+  })
+);
+
 app.use("/api/v1", home);
 app.use("/api/v1", user);
 app.use("/api/v1", product);
